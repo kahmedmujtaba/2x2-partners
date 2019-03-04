@@ -1,45 +1,3 @@
-/*= Reset CSS 
-============= */
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
-html, body {
-  border: 0;
-  margin: 0;
-  padding: 0; }
-
-body {
-  font: 14px "Lato", Arial, sans-serif;
-  min-width: 100%;
-  min-height: 100%;
-  color: #666; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-h2 {
-  text-align: center;
-  color: #2079df;
-  font-size: 28px;
-  float: left;
-  width: 100%;
-  margin: 30px 0;
-  position: relative;
-  line-height: 58px;
-  font-weight: 400; }
-
-h2:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 100px;
-  height: 2px;
-  background-color: #2079df;
-  margin-left: -50px; }
-
-/*= Reset CSS End
-================= */
 /*= input focus effects css
 =========================== */
 :focus {
@@ -54,8 +12,21 @@ input[type="text"] {
 
 /*Colors*/
 /*Font Sizes*/
-/*Breakpoints*/
-/*dimensions*/
+/*= Reset CSS 
+============= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font: 62.5% "Roboto", sans-serif; }
+
+body {
+  box-sizing: border-box; }
+
+/*= Reset CSS End
+================= */
 .form-element {
   position: relative; }
   .form-element .fancy-input {

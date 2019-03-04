@@ -1,0 +1,47 @@
+
+
+/*= input focus effects css
+=========================== */
+:focus{outline: none;}
+input[type="text"]{
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333; width: 100%; box-sizing:
+    border-box; letter-spacing: 1px;
+}
+/// ======================Global VARIABLES =============================== /////////////////
+//@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+$font: 'Roboto', sans-serif;
+/*Colors*/
+$primary: #e31937;
+$primary-grad: linear-gradient(to right, #f85032, #e73827);
+$secondary: #ffa016;
+$secondary-grad: linear-gradient(to right, #fdc830, #f37335);
+$grey: #cccccc;
+$grey-darker: #999999;
+$grey-darkest: #666666;
+$grey-lighter: #eeeeee;
+$grey-lightest: #f8f8f8;
+$grey-grad: linear-gradient(to right, #abbaab, #ffffff);
+$white: #ffffff;
+$black: #000000;
+$success: #00B259;
+$success-grad: linear-gradient(to right, #56ab2f, #a8e063);
+$danger-grad: linear-gradient(to right, #ed213a, #93291e);
+$info-grad: linear-gradient(to right, #74ebd5, #acb6e5);
+$warning-grad: linear-gradient(to right, #f09819, #edde5d);
+
+/*Font Sizes*/
+$jumbo: 8rem;
+$page-title: 2.4rem;
+$section-title: 1.8rem;
+$table-head: 1.4rem;
+$table-cell: 1.3rem;
+$labels: 1.4rem;
+$placeholders: 1.3rem;
+$buttons: 1.3rem;
+$nav-head: 1.4rem;
+$nav-item: 1.3rem;
+$plain-text: 1.2rem;
+$notes: 1.1rem;
+$rem:62.5%;
+//// ======================================== Variables section end here Styling Starts===============================////////////

@@ -1,0 +1,110 @@
+/*= Reset CSS 
+============= */
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: inherit;
+}
+html{
+    font: $rem/1 $font;
+
+}
+body{
+    box-sizing: border-box;
+}
+/*= Reset CSS End
+================= */
+.form-element{
+    position:relative;
+    .fancy-input {
+    font: 1em/1 $font;
+    color: darken($grey-darker, 30%);
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border:0;
+    border-bottom: 1px solid $grey;
+    padding: 0.3em 0.7em;
+    &::placeholder{
+      font-size: .8em;
+    }
+    ~ .fancy-input--border {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary;
+        transition: 0.2s;
+        transition-delay: 0.2s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: $primary;
+        transition: 0.2s;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        transition-delay: 0.6s;
+      }
+      i {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 2px;
+          height: 0;
+          background-color: $primary;
+          transition: 0.2s;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 0;
+          background-color: $primary;
+          transition: 0.2s;
+          left: auto;
+          right: 0;
+          top: auto;
+          bottom: 0;
+          transition-delay: 0.4s;
+        }
+      }
+    }
+    &:focus{
+      outline:none;
+      ~ .fancy-input--border {
+        &:before {
+          width: 100%;
+          transition: 0.2s;
+          transition-delay: 0.6s;
+        }
+        &:after {
+          width: 100%;
+          transition: 0.2s;
+          transition-delay: 0.2s;
+        }
+        i {
+          &:before {
+            height: 100%;
+            transition: 0.2s;
+          }
+          &:after {
+            height: 100%;
+            transition: 0.2s;
+            transition-delay: 0.4s;
+          }
+        }
+      }
+    }
+    }
+}
