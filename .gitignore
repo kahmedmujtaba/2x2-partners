@@ -1,0 +1,9 @@
+target/
+*.iml
+*.idea
+.classpath
+.externalToolBuilders/
+.project
+.settings/
+node_modules/
+*.DS_STORE*
