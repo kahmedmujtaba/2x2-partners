@@ -12,12 +12,31 @@ input[type="text"] {
 
 /*Colors*/
 /*Font Sizes*/
+.header-main {
+  background: #16254e; }
+  .header-main--logo {
+    height: 7rem; }
+    .header-main--logo__img {
+      width: 7rem; }
+  .header-main--nav {
+    display: flex;
+    align-items: center;
+    color: #ffffff; }
+    .header-main--nav ul {
+      margin: 0; }
+      .header-main--nav ul li {
+        display: inline-block;
+        padding: 1rem;
+        font-size: 1.4rem; }
+
 /*= Reset CSS 
 ============= */
 * {
   padding: 0;
   margin: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  list-style: none;
+  text-decoration: none; }
   *::before {
     padding: 0;
     margin: 0;
@@ -35,6 +54,92 @@ body {
 
 /*= Reset CSS End
 ================= */
+.banner {
+  width: calc(100vw + .5rem);
+  height: 85vh;
+  background: #27418a url("/images/banner-img.jpg") center center;
+  background-size: cover;
+  position: relative; }
+  .banner--overlay1, .banner--overlay2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .banner--overlay1 {
+    background-color: #16254e;
+    opacity: .8; }
+  .banner--overlay2 {
+    background-color: #16254e;
+    transform: translateX(100%);
+    opacity: 0.4; }
+  .banner--text-wraper {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center; }
+    .banner--text-wraper .slogan {
+      color: #ffffff;
+      z-index: 2;
+      text-transform: uppercase;
+      width: 35rem; }
+      .banner--text-wraper .slogan h2 {
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        font-weight: 400; }
+      .banner--text-wraper .slogan h1 {
+        font-size: 4rem;
+        font-weight: 600; }
+        .banner--text-wraper .slogan h1 span {
+          text-transform: lowercase; }
+      .banner--text-wraper .slogan p {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        margin-top: 5rem; }
+      .banner--text-wraper .slogan--rotated {
+        position: absolute;
+        left: -4rem;
+        top: 35vh;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        transform: rotate(-90deg) translateY(-50%); }
+  .banner--scroll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #ffffff;
+    width: 3rem;
+    height: 3rem;
+    bottom: 5vh;
+    left: 10vw;
+    border-radius: 50%; }
+    .banner--scroll-btn:hover {
+      text-decoration: none; }
+    .banner--scroll-btn i {
+      font-size: calc(3rem / 2);
+      color: #00B259; }
+  .banner--fwd-rws-btns {
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    display: flex; }
+    .banner--fwd-rws-btns .slider-btn {
+      background: #ffffff;
+      padding: 3em 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.2em; }
+      .banner--fwd-rws-btns .slider-btn:hover {
+        text-decoration: none; }
+      .banner--fwd-rws-btns .slider-btn i {
+        font-size: 1.8rem;
+        color: #00B259; }
+
 .form-element {
   position: relative; }
   .form-element .fancy-input {
@@ -55,7 +160,7 @@ body {
       right: 0;
       width: 0;
       height: 2px;
-      background-color: #e31937;
+      background-color: #16254e;
       transition: 0.2s;
       transition-delay: 0.2s; }
     .form-element .fancy-input ~ .fancy-input--border:after {
@@ -63,7 +168,7 @@ body {
       position: absolute;
       width: 0;
       height: 2px;
-      background-color: #e31937;
+      background-color: #16254e;
       transition: 0.2s;
       top: auto;
       bottom: 0;
@@ -77,14 +182,14 @@ body {
       left: 0;
       width: 2px;
       height: 0;
-      background-color: #e31937;
+      background-color: #16254e;
       transition: 0.2s; }
     .form-element .fancy-input ~ .fancy-input--border i:after {
       content: "";
       position: absolute;
       width: 2px;
       height: 0;
-      background-color: #e31937;
+      background-color: #16254e;
       transition: 0.2s;
       left: auto;
       right: 0;

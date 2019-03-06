@@ -1,10 +1,11 @@
 /*= Reset CSS 
 ============= */
-
 * {
-    padding:0;
+    padding:0 ;
     margin:0;
     box-sizing: inherit;
+    list-style: none;
+    text-decoration: none;
     &::before{
       padding:0;
       margin:0;
@@ -15,16 +16,120 @@
       margin:0;
       box-sizing: inherit;
     }
+    
 }
 html{
     font: $rem/1 $font;
-
 }
 body{
     box-sizing: border-box;
 }
 /*= Reset CSS End
 ================= */
+.banner{
+  width:calc(100vw + .5rem);
+  height: 85vh;
+  background: lighten($primary,15%) url("/images/banner-img.jpg") center center;
+  background-size: cover;
+  position: relative;
+  &--overlay1, &--overlay2{
+    position: absolute;
+    width:50%;
+    height: 100%;
+    top:0;
+    left:0;
+  }
+  &--overlay1{
+    background-color: $primary;
+    opacity: .8;
+  }
+  &--overlay2{
+    background-color: $primary;
+    transform: translateX(100%);
+    opacity: 0.4;
+  }
+  &--text-wraper{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    .slogan{
+      color:$white;
+      z-index: 2;
+      text-transform: uppercase;
+      width: 35rem;
+      h2{
+        font-size: 3rem;
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+      }
+      h1{
+        font-size: 4rem;
+        font-weight: 600;
+        span{
+          text-transform: lowercase;
+        }
+      }
+      p{
+        text-transform: capitalize;
+        font-size: $plain-text;
+        margin-top: 5rem;
+      }
+      &--rotated{
+        position: absolute;
+        left:-4rem;
+        top:35vh;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        transform: rotate(-90deg) translateY(-50%);
+      }
+    }
+  }
+  &--scroll-btn{
+    $scroll-btn-size:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background:$white;
+    width: $scroll-btn-size;
+    height: $scroll-btn-size;
+    bottom: 5vh;
+    left: 10vw;
+    border-radius: 50%;
+    &:hover{
+      text-decoration: none;
+    }
+    i{
+      font-size: calc(#{$scroll-btn-size} / 2);
+      color:$success;
+    }
+  }
+  &--fwd-rws-btns{
+    position: absolute;
+    bottom: 0;
+    right: 10vw;
+    display: flex;
+    .slider-btn{
+      background: $white;
+      padding: 3em 3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.2em;
+      &:hover{
+        text-decoration: none;
+      }
+      i{
+        font-size: 1.8rem;
+        color:$success;
+      }
+    }
+  }
+}
 .form-element{
     position:relative;
     .fancy-input {
