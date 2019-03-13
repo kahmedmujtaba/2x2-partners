@@ -20,14 +20,26 @@
 }
 html{
     font: $rem/1 $font;
+    scroll-behavior: smooth;
 }
 body{
     box-sizing: border-box;
 }
 /*= Reset CSS End
 ================= */
+.slogan--rotated{
+    position: absolute;
+    left:-4rem;
+    top:35vh;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    transform: rotate(-90deg) translateY(-50%);
+}
 .banner{
-  width:calc(100vw + .5rem);
+  width: 100%;
+  max-width: 100%;
   height: 85vh;
   background: lighten($primary,15%) url("/images/banner-img.jpg") center center;
   background-size: cover;
@@ -76,16 +88,6 @@ body{
         font-size: $plain-text;
         margin-top: 5rem;
       }
-      &--rotated{
-        position: absolute;
-        left:-4rem;
-        top:35vh;
-        font-size: 2.5rem;
-        letter-spacing: 0.2rem;
-        font-weight: 400;
-        text-transform: capitalize;
-        transform: rotate(-90deg) translateY(-50%);
-      }
     }
   }
   &--scroll-btn{
@@ -100,12 +102,14 @@ body{
     bottom: 5vh;
     left: 10vw;
     border-radius: 50%;
-    &:hover{
+    transition: .2s;
+     &:hover{
       text-decoration: none;
+      transform: translateY(20%);
     }
     i{
       font-size: calc(#{$scroll-btn-size} / 2);
-      color:$success;
+      color:$primary;
     }
   }
   &--fwd-rws-btns{
@@ -120,15 +124,101 @@ body{
       justify-content: center;
       align-items: center;
       margin: 0 0.2em;
+      transition: .2s;
+      &.slider-btn--left{
+        &:hover{
+          i{
+            transform: translateX(-20%);
+          }
+        }
+      }
+      &.slider-btn--right{
+        &:hover{
+          i{
+            transform: translateX(20%);
+          }
+        }
+      }
       &:hover{
         text-decoration: none;
       }
       i{
         font-size: 1.8rem;
-        color:$success;
+        color:$primary;
+        transition: .2s;
       }
     }
   }
+}
+.about{
+  width:65%;
+  background:$grey-lighter;
+  padding: 0 3rem 7rem 0;
+  &--title_faded{
+    color:darken($grey-lighter, 5%);
+    font-size: 7rem;
+  }
+  &--details{
+    margin-left:7rem;
+    &__title{
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      span{
+        text-transform: capitalize;
+      }
+
+    }
+    &--text{
+      color:darken($grey-lighter, 15%);
+      margin-top:3rem;
+      max-width: 60%;
+    }
+    &--computer-graph, &--communications, &--investment, &--statistics{
+      padding: 2rem;
+      background: lighten($grey, 10%);
+      margin:1rem;
+      &:first-child{
+        margin-left: 0;
+      }
+      img{
+        display: inline-block;
+        width: 3rem;
+      }
+    }
+  }
+  &--read__more__btn{
+    margin: 2rem 0;
+    text-transform: uppercase;
+    i{
+      margin:0 .5rem;
+    }
+  }
+  &--section__img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 32rem;
+    height: 100%;
+    background:url("/images/about-img.jpg") center no-repeat;
+    background-size: contain;
+    transform: translate(10%, -50%);
+  }
+}
+.business{
+  @extend .about;
+  background:$white;
+  .slogan--rotated{
+    transform: rotate(-90deg) translate(85%, 0%);
+    font-size: 2rem;
+  }
+}
+.business-img{
+  background: url("/images/business-img.jpg") center center no-repeat;
+  background-size: cover;
+  width: 35%;
+  overflow: hidden;
 }
 .form-element{
     position:relative;
@@ -222,4 +312,14 @@ body{
       }
     }
     }
+}
+.investments{
+  display: flex;
+  flex-basis: 35%;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  img{
+    max-height: 20rem;
+  }
 }
