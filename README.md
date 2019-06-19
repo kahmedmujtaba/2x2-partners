@@ -1,5 +1,5 @@
 # 2x2-partners
-to be designed as ```private-equity-firm2.jpg``` provided by client
+to be designed as "private-equity-firm2.jpg" provided by client
 1. download or clone this project.
 
 2. Install node.js if not installed already.
